@@ -161,6 +161,7 @@
             <div class="col-md-6">
                 <div class="card">
                     <div class="card-body">
+
                         <h5 class="card-title">Form Pertanyaan</h5>
 
                         @if($errors->any())
@@ -174,6 +175,8 @@
                                 </ul>
                             </div>
                         @endif
+                        <h5 class="card-title">Form Pertanyaan Sayaaaaa</h5>
+
                         <form action="{{ route('question.store') }}" method="POST">
                             @csrf
                             {{-- <form action="" method="POST"> --}}
