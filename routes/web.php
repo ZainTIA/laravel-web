@@ -5,6 +5,8 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\QuestionController;
 use App\Http\Controllers\PelangganController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\CvController;
+
 
 
 Route::get('/', function () {
@@ -22,3 +24,11 @@ Route::resource('pelanggan', PelangganController::class);
 // route('pelanggan.update', $dataPelanggan->pelanggan_id);
 
 // Route::resource('pelanggan', PelangganController::class);
+// Route::get('/cv', [CvController::class, 'index'])->name('cv.index');
+
+Route::resource('cv', CvController::class);
+
+
+
+
+
