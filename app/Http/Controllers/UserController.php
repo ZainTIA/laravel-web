@@ -17,10 +17,8 @@ class UserController extends Controller
     {
         return view('admin.user.create');
     }
-
     public function store(Request $request)
     {
-        // dd($request->all());
 
         $data['name']     = $request->name;
         $data['email']    = $request->email;
@@ -50,7 +48,6 @@ class UserController extends Controller
         $user->name  = $request->name;
         $user->email = $request->email;
 
-        // Memperbarui password hanya jika input password diisi pada form edit
         if ($request->filled('password')) {
             $user->password = Hash::make($request->password);
         }
